@@ -1,6 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
 import axios from "axios";
-import "dotenv/config";
 
 // Création du contexte
 const CryptoContext = createContext();
@@ -9,7 +8,6 @@ const CryptoContext = createContext();
 const CryptoProvider = ({ children }) => {
   const [crypto, setCrypto] = useState([]);
   const [isDataLoaded, setIsDataLoaded] = useState(false);
-  console.log(process.env.REACT_APP_API_KEY);
   useEffect(() => {
     // Fonction pour récupérer les utilisateurs depuis l'API
     const fetchCrypto = async () => {

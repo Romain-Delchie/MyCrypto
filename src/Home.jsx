@@ -23,7 +23,7 @@ export default function Home() {
       <NavBar />
       <h1>Suivi Crypto</h1>
       <h2>Valeur portefeuille actuelle</h2>
-      <p>{cryptoTotalUSD} $</p>
+      <p className="parap-home">{cryptoTotalUSD} $</p>
       <Temporary allCrypto={crypto} page="totalUSD" />
     </main>
   );
