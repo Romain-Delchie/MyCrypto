@@ -14,7 +14,7 @@ const CryptoProvider = ({ children }) => {
     // Fonction pour récupérer les utilisateurs depuis l'API
     const fetchCrypto = async () => {
       try {
-        const response = await axios.get(process.env.REACT_APP_API_KEY);
+        const response = await axios.get(import.meta.env.VITE_API_URL);
         setCrypto(response.data);
         setIsDataLoaded(true);
       } catch (error) {
