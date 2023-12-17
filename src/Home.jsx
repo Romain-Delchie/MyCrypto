@@ -20,15 +20,14 @@ export default function Home() {
   if (!crypto || crypto.length === 0 || !cryptoTotalUSD) {
     return <div>loading...</div>;
   }
-  if (typeof cryptoTotalUSD !== isNaN) {
-    return (
-      <main>
-        <NavBar />
-        <h1>Suivi Crypto</h1>
-        <h2>Valeur portefeuille actuelle</h2>
-        <p className="parap-home">{cryptoTotalUSD} $</p>
-        <Temporary allCrypto={crypto} page="totalUSD" />
-      </main>
-    );
-  }
+
+  return (
+    <main>
+      <NavBar />
+      <h1>Suivi Crypto</h1>
+      <h2>Valeur portefeuille actuelle</h2>
+      <p className="parap-home">{cryptoTotalUSD} $</p>
+      <Temporary allCrypto={crypto} page="totalUSD" />
+    </main>
+  );
 }
