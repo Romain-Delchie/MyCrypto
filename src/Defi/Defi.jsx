@@ -6,14 +6,15 @@ import "./Defi.css";
 
 export default function Defi() {
   const { crypto } = useContext(CryptoContext);
-  const [cryptoTotalUSD, setCryptoTotalUSD] = useState(0);
+  const [cryptoTotalUSD, setCryptoTotalUSD] = useState("0");
+  console.log(typeof cryptoTotalUSD);
   useEffect(() => {
     setCryptoTotalUSD(
-      Number(Object.values(crypto)
+      Object.values(crypto)
         .reduce((acc, cryptoItem) => {
           return acc + cryptoItem.totalUSDDefi;
         }, 0)
-        .toFixed(0))
+        .toFixed(0)
     );
   }, [crypto]);
   if (!cryptoTotalUSD || !crypto) {
