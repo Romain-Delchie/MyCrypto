@@ -8,23 +8,27 @@ export default function Home() {
   const [cryptoTotalUSD, setCryptoTotalUSD] = useState(0);
   useEffect(() => {
     setCryptoTotalUSD(
-      Object.values(crypto)
-        .reduce((acc, cryptoItem) => {
-          return acc + cryptoItem.totalUSD;
-        }, 0)
-        .toFixed(0)
+      Number(
+        Object.values(crypto)
+          .reduce((acc, cryptoItem) => {
+            return acc + cryptoItem.totalUSD;
+          }, 0)
+          .toFixed(0)
+      )
     );
   }, [crypto]);
   if (!crypto || crypto.length === 0 || !cryptoTotalUSD) {
     return <div>loading...</div>;
   }
-  return (
-    <main>
-      <NavBar />
-      <h1>Suivi Crypto</h1>
-      <h2>Valeur portefeuille actuelle</h2>
-      <p className="parap-home">{cryptoTotalUSD} $</p>
-      <Temporary allCrypto={crypto} page="totalUSD" />
-    </main>
-  );
+  if (typeof cryptoTotalUSD !== isNaN) {
+    return (
+      <main>
+        <NavBar />
+        <h1>Suivi Crypto</h1>
+        <h2>Valeur portefeuille actuelle</h2>
+        <p className="parap-home">{cryptoTotalUSD} $</p>
+        <Temporary allCrypto={crypto} page="totalUSD" />
+      </main>
+    );
+  }
 }

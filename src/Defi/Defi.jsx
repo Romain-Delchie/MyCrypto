@@ -9,11 +9,11 @@ export default function Defi() {
   const [cryptoTotalUSD, setCryptoTotalUSD] = useState(0);
   useEffect(() => {
     setCryptoTotalUSD(
-      Object.values(crypto)
+      Number(Object.values(crypto)
         .reduce((acc, cryptoItem) => {
           return acc + cryptoItem.totalUSDDefi;
         }, 0)
-        .toFixed(0)
+        .toFixed(0))
     );
   }, [crypto]);
   if (!cryptoTotalUSD || !crypto) {
