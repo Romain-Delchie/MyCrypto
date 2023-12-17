@@ -1,7 +1,7 @@
 import CryptoCard from "../CryptoCard/CryptoCard";
 import "./CryptoList.css";
 
-export default function CryptoList({ crypto, page }) {
+export default function CryptoList({ crypto, page, total }) {
   return (
     <div className="crypto-list">
       {Object.keys(crypto).map((cryptoKey) => {
@@ -12,6 +12,7 @@ export default function CryptoList({ crypto, page }) {
               token={token}
               cryptoKey={cryptoKey}
               page={page}
+              total={total}
               key={cryptoKey}
             />
           );

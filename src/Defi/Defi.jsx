@@ -86,7 +86,7 @@ export default function Defi() {
         </div>
         {}
         <Chart allCrypto={crypto} page="totalUSDDefi" />
-        <CryptoList crypto={crypto} page="Defi" />
+        <CryptoList crypto={crypto} page="Defi" total={cryptoTotalUSD} />
       </main>
     );
   }

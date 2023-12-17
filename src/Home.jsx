@@ -7,7 +7,6 @@ export default function Home() {
   const { crypto } = useContext(CryptoContext);
   const [cryptoTotalUSD, setCryptoTotalUSD] = useState(0);
   useEffect(() => {
-    console.log("Crypto:", crypto);
     setCryptoTotalUSD(
       Object.values(crypto).reduce((acc, cryptoItem) => {
         const totalUSD = parseFloat(cryptoItem.totalUSD);
@@ -28,7 +27,7 @@ export default function Home() {
       <h2>Valeur portefeuille actuelle</h2>
       <p className="parap-home">{cryptoTotalUSD.toFixed(0)} $</p>
       <Chart allCrypto={crypto} page="totalUSD" />
-      <CryptoList crypto={crypto} page="" />
+      <CryptoList crypto={crypto} page="" total={cryptoTotalUSD} />
     </main>
   );
 }
