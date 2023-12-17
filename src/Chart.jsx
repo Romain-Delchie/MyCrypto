@@ -5,11 +5,13 @@ import { all } from "axios";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-export default function Temporary({ allCrypto, page }) {
+export default function Chart({ allCrypto, page }) {
+  console.log(allCrypto);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [data, setData] = useState({});
+  const [data, setData] = useState();
   useEffect(() => {
-    setData({
+    if(allCrypto){
+    const newData = {
       labels: Object.keys(allCrypto).filter((cryptoKey) => {
         return allCrypto[cryptoKey][page] !== 0;
       }),
@@ -35,8 +37,10 @@ export default function Temporary({ allCrypto, page }) {
           hoverOffset: 60,
         },
       ],
-    });
-    setIsLoaded(true);
+    };
+    setData(newData);
+      setIsLoaded(true);
+    }
   }, [allCrypto]);
   if (!isLoaded || !data) {
     return <div>loading...</div>;

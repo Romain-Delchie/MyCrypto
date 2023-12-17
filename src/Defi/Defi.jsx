@@ -1,23 +1,31 @@
 import { useContext, useEffect, useState } from "react";
 import { CryptoContext } from "../context/CryptoContext";
 import NavBar from "../component/NavBar/NavBar";
-import Temporary from "../Temporary";
+import Chart from "../Chart";
 import "./Defi.css";
+import CryptoList from "../component/CryptoList/CryptoList";
 
 export default function Defi() {
   const { crypto } = useContext(CryptoContext);
   const [cryptoTotalUSD, setCryptoTotalUSD] = useState(0);
-  console.log(typeof cryptoTotalUSD);
+  const [isDataLoaded, setIsDataLoaded] = useState(false);
+
   useEffect(() => {
-    setCryptoTotalUSD(
-      Object.values(crypto).reduce((acc, cryptoItem) => {
-        return acc + parseFloat(cryptoItem.totalUSDDefi);
-      }, 0)
-    );
+    if (crypto) {
+      const tot = Object.values(crypto).reduce((acc, cryptoItem) => {
+        return acc + cryptoItem.totalUSDDefi;
+      }, 0);
+      if (!isNaN(tot)) {
+        setCryptoTotalUSD(tot);
+        setIsDataLoaded(true);
+      }
+    }
   }, [crypto]);
-  if (!cryptoTotalUSD || !crypto) {
+
+  if (!isDataLoaded) {
     return <div>loading...</div>;
-  } else {
+  }
+  if (isDataLoaded && cryptoTotalUSD !== 0) {
     return (
       <main>
         <NavBar />
@@ -76,7 +84,11 @@ export default function Defi() {
             </div>
           </div>
         </div>
-        <Temporary allCrypto={crypto} page="totalUSDDefi" />
+        {
+
+        }
+        <Chart allCrypto={crypto} page="totalUSDDefi" />
+        <CryptoList crypto={crypto} page="Defi" />
       </main>
     );
   }

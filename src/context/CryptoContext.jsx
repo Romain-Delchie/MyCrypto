@@ -14,7 +14,7 @@ const CryptoProvider = ({ children }) => {
       try {
         const response = await axios.get(import.meta.env.VITE_API_URL);
         setCrypto(response.data);
-        setIsDataLoaded(true);
+        
       } catch (error) {
         console.error("Error fetching crypto:", error);
       }
@@ -58,6 +58,9 @@ const CryptoProvider = ({ children }) => {
           token.totalUSDDefi = 0;
         }
       });
+    }
+    if (crypto.length !== 0) {
+      setIsDataLoaded(true);
     }
   }, [crypto]);
   return (
