@@ -14,9 +14,7 @@ const CryptoProvider = ({ children }) => {
     // Fonction pour récupérer les utilisateurs depuis l'API
     const fetchCrypto = async () => {
       try {
-        const response = await axios.get(
-          `https://api.coingecko.com/api/v3/simple/price?ids=marlin,radix,pocket-network,interlay,airswap,agoric,tether,fsn,modex,apwine&vs_currencies=usd&x_cg_demo_api_key=${process.env.REACT_APP_API_KEY}`
-        );
+        const response = await axios.get(process.env.REACT_APP_API_KEY);
         setCrypto(response.data);
         setIsDataLoaded(true);
       } catch (error) {
