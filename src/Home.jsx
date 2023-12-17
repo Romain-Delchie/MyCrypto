@@ -15,7 +15,7 @@ export default function Home() {
         .toFixed(0)
     );
   }, [crypto]);
-  if (!crypto || crypto.length === 0) {
+  if (!crypto || crypto.length === 0 || !cryptoTotalUSD) {
     return <div>loading...</div>;
   }
   return (
