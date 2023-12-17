@@ -11,7 +11,7 @@ export default function Defi() {
   useEffect(() => {
     setCryptoTotalUSD(
       Object.values(crypto).reduce((acc, cryptoItem) => {
-        return acc + cryptoItem.totalUSDDefi;
+        return acc + parseFloat(cryptoItem.totalUSDDefi);
       }, 0)
     );
   }, [crypto]);
@@ -72,7 +72,7 @@ export default function Defi() {
                 </svg>
               )}
 
-              <p>{cryptoTotalUSD.toFixed(0) - 2200} $</p>
+              <p>{(cryptoTotalUSD - 2200).toFixed(0)} $</p>
             </div>
           </div>
         </div>

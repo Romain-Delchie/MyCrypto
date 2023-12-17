@@ -9,10 +9,11 @@ export default function Home() {
   useEffect(() => {
     setCryptoTotalUSD(
       Object.values(crypto).reduce((acc, cryptoItem) => {
-        return acc + cryptoItem.totalUSD;
+        return acc + parseFloat(cryptoItem.totalUSD);
       }, 0)
     );
   }, [crypto]);
+  console.log(cryptoTotalUSD);
   if (!crypto || crypto.length === 0 || !cryptoTotalUSD) {
     return <div>loading...</div>;
   }
