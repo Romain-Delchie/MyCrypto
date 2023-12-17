@@ -5,14 +5,12 @@ import Temporary from "./Temporary";
 import NavBar from "./component/NavBar/NavBar";
 export default function Home() {
   const { crypto } = useContext(CryptoContext);
-  const [cryptoTotalUSD, setCryptoTotalUSD] = useState("0");
+  const [cryptoTotalUSD, setCryptoTotalUSD] = useState(0);
   useEffect(() => {
     setCryptoTotalUSD(
-      Object.values(crypto)
-        .reduce((acc, cryptoItem) => {
-          return acc + cryptoItem.totalUSD;
-        }, 0)
-        .toFixed(0)
+      Object.values(crypto).reduce((acc, cryptoItem) => {
+        return acc + cryptoItem.totalUSD;
+      }, 0)
     );
   }, [crypto]);
   if (!crypto || crypto.length === 0 || !cryptoTotalUSD) {
@@ -24,7 +22,7 @@ export default function Home() {
       <NavBar />
       <h1>Suivi Crypto</h1>
       <h2>Valeur portefeuille actuelle</h2>
-      <p className="parap-home">{cryptoTotalUSD} $</p>
+      <p className="parap-home">{cryptoTotalUSD.toFixed(0)} $</p>
       <Temporary allCrypto={crypto} page="totalUSD" />
     </main>
   );

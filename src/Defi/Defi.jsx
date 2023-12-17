@@ -6,15 +6,13 @@ import "./Defi.css";
 
 export default function Defi() {
   const { crypto } = useContext(CryptoContext);
-  const [cryptoTotalUSD, setCryptoTotalUSD] = useState("0");
+  const [cryptoTotalUSD, setCryptoTotalUSD] = useState(0);
   console.log(typeof cryptoTotalUSD);
   useEffect(() => {
     setCryptoTotalUSD(
-      Object.values(crypto)
-        .reduce((acc, cryptoItem) => {
-          return acc + cryptoItem.totalUSDDefi;
-        }, 0)
-        .toFixed(0)
+      Object.values(crypto).reduce((acc, cryptoItem) => {
+        return acc + cryptoItem.totalUSDDefi;
+      }, 0)
     );
   }, [crypto]);
   if (!cryptoTotalUSD || !crypto) {
@@ -31,7 +29,7 @@ export default function Defi() {
           </div>
           <div className="defi-item">
             <h2>Valeur actuelle</h2>
-            <p>{cryptoTotalUSD} $</p>
+            <p>{cryptoTotalUSD.toFixed(0)} $</p>
           </div>
           <div
             className={
@@ -74,7 +72,7 @@ export default function Defi() {
                 </svg>
               )}
 
-              <p>{cryptoTotalUSD - 2200} $</p>
+              <p>{cryptoTotalUSD.toFixed(0) - 2200} $</p>
             </div>
           </div>
         </div>
