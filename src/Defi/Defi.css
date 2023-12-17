@@ -1,0 +1,28 @@
+h1 {
+  text-align: center;
+}
+
+.defi-item {
+  margin-bottom: 5px;
+}
+
+.defi-result {
+  margin-bottom: 30px;
+}
+.defi-result-green {
+  color: green;
+}
+
+.defi-result-red {
+  color: red;
+}
+
+.defi-svg {
+  width: 20px;
+  margin-right: 10px;
+}
+.result-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

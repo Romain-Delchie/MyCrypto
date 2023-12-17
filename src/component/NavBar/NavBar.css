@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #3d522a;
+  padding: 20px 50px;
+  border-radius: 9px;
+}
+.navBar-link {
+  color: #5b5bd6;
+}
+.navBar-link:hover {
+  color: #0090ff;
+}
+.navBar-link-active {
+  color: #ab4aba;
+}
+
+.navBar-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #0090ff;
+  transition: width 0.3s;
+}
+
+.navBar-link:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
