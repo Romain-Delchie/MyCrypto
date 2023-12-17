@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { CryptoContext } from "../context/CryptoContext";
 import NavBar from "../component/NavBar/NavBar";
-import Chart from "../Chart";
+import Chart from "../component/Chart/Chart";
 import "./Defi.css";
 import CryptoList from "../component/CryptoList/CryptoList";
 
@@ -84,9 +84,7 @@ export default function Defi() {
             </div>
           </div>
         </div>
-        {
-
-        }
+        {}
         <Chart allCrypto={crypto} page="totalUSDDefi" />
         <CryptoList crypto={crypto} page="Defi" />
       </main>

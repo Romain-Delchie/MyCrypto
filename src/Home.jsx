@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from "react";
 import { CryptoContext } from "./context/CryptoContext";
-import Chart from "./Chart";
+import Chart from "./component/Chart/Chart";
 import NavBar from "./component/NavBar/NavBar";
 import CryptoList from "./component/CryptoList/CryptoList";
 export default function Home() {
