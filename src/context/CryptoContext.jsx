@@ -29,12 +29,12 @@ const CryptoProvider = ({ children }) => {
       crypto.airswap.qty = 58590;
       crypto.apwine.qty = 0;
       crypto.fsn.qty = 1806;
-      crypto.tether.qty = 4192;
+      crypto.tether.qty = 0;
       crypto.interlay.qty = 7486;
       crypto.marlin.qty = 398851;
       crypto.modex.qty = 0;
       crypto["pocket-network"].qty = 47288;
-      crypto.radix.qty = 138664;
+      crypto.radix.qty = 243304;
       crypto.agoric.qtyDefi = 0;
       crypto.airswap.qtyDefi = 0;
       crypto.apwine.qtyDefi = 0;
