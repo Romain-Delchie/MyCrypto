@@ -33,7 +33,7 @@ const CryptoProvider = ({ children }) => {
       crypto.interlay.qty = 7486;
       crypto.marlin.qty = 398851;
       crypto.modex.qty = 0;
-      crypto["pocket-network"].qty = 47288;
+      crypto["pocket-network"].qty = 79232;
       crypto.radix.qty = 243304;
       crypto.agoric.qtyDefi = 0;
       crypto.airswap.qtyDefi = 0;
