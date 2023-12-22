@@ -26,10 +26,10 @@ const CryptoProvider = ({ children }) => {
   useEffect(() => {
     if (crypto.length !== 0) {
       crypto.agoric.qty = 0;
-      crypto.airswap.qty = 58590;
+      crypto.airswap.qty = 59590;
       crypto.apwine.qty = 0;
       crypto.fsn.qty = 1806;
-      crypto.tether.qty = 0;
+      crypto.tether.qty = 573;
       crypto.interlay.qty = 7486;
       crypto.marlin.qty = 398851;
       crypto.modex.qty = 0;
