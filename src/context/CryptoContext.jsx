@@ -27,7 +27,7 @@ const CryptoProvider = ({ children }) => {
     if (crypto.length !== 0) {
       crypto.agoric.qty = 0;
       crypto.integritee.qty = 270;
-      crypto.drep.qty = 1914;
+      crypto["drep-new"].qty = 1914;
       crypto.airswap.qty = 59590;
       crypto.apwine.qty = 0;
       crypto.fsn.qty = 1806;
@@ -42,7 +42,7 @@ const CryptoProvider = ({ children }) => {
       crypto.apwine.qtyDefi = 0;
       crypto.integritee.qtyDefi = 0;
       crypto.fsn.qtyDefi = 0;
-      crypto.drep.qtyDefi = 0;
+      crypto["drep-new"].qtyDefi = 0;
       crypto.tether.qtyDefi = 0;
       crypto.interlay.qtyDefi = 14972;
       crypto.marlin.qtyDefi = 0;
