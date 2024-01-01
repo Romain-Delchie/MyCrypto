@@ -33,6 +33,8 @@ export default function Chart({ allCrypto, page }) {
               "rgba(153, 102, 255, 1)",
               "rgba(255, 159, 64, 1)",
               "#f0f0f0f0",
+              "#00000000",
+              "#a39073",
             ],
             hoverOffset: 60,
           },
