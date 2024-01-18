@@ -9,7 +9,7 @@ const CryptoProvider = ({ children }) => {
   const [crypto, setCrypto] = useState([]);
   const [isDataLoaded, setIsDataLoaded] = useState(false);
   useEffect(() => {
-    // Fonction pour récupérer les utilisateurs depuis l'API
+    
     const fetchCrypto = async () => {
       try {
         const response = await axios.get(import.meta.env.VITE_API_URL);
