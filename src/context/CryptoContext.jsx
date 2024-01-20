@@ -27,7 +27,7 @@ const CryptoProvider = ({ children }) => {
     if (crypto.length !== 0) {
       crypto.agoric.qty = 0;
       crypto.integritee.qty = 270;
-      crypto["drep-new"].qty = 1914;
+      crypto["drep-new"].qty = 0;
       crypto.zcash.qty = 199;
       crypto.airswap.qty = 59590;
       crypto.apwine.qty = 0;
@@ -36,7 +36,7 @@ const CryptoProvider = ({ children }) => {
       crypto.interlay.qty = 7486;
       crypto.marlin.qty = 398851;
       crypto.modex.qty = 0;
-      crypto["pocket-network"].qty = 79232;
+      crypto["pocket-network"].qty = 80708;
       crypto.radix.qty = 131163;
       crypto.agoric.qtyDefi = 0;
       crypto.airswap.qtyDefi = 0;
