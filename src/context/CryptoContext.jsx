@@ -9,12 +9,10 @@ const CryptoProvider = ({ children }) => {
   const [crypto, setCrypto] = useState([]);
   const [isDataLoaded, setIsDataLoaded] = useState(false);
   useEffect(() => {
-    
     const fetchCrypto = async () => {
       try {
         const response = await axios.get(import.meta.env.VITE_API_URL);
         setCrypto(response.data);
-        
       } catch (error) {
         console.error("Error fetching crypto:", error);
       }
@@ -25,7 +23,7 @@ const CryptoProvider = ({ children }) => {
   }, []);
   useEffect(() => {
     if (crypto.length !== 0) {
-      crypto.agoric.qty = 0;
+      crypto.agoric.qty = 6765;
       crypto.integritee.qty = 270;
       crypto["drep-new"].qty = 0;
       crypto.zcash.qty = 199;
@@ -36,8 +34,8 @@ const CryptoProvider = ({ children }) => {
       crypto.interlay.qty = 7486;
       crypto.marlin.qty = 398851;
       crypto.modex.qty = 0;
-      crypto["pocket-network"].qty = 80708;
-      crypto.radix.qty = 131163;
+      crypto["pocket-network"].qty = 89539;
+      crypto.radix.qty = 102130;
       crypto.agoric.qtyDefi = 0;
       crypto.airswap.qtyDefi = 0;
       crypto.apwine.qtyDefi = 0;
