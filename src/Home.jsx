@@ -30,7 +30,7 @@ export default function Home() {
       <CryptoList crypto={crypto} page="" total={cryptoTotalUSD} />
       <p className="tati">
         Tatiana : 3860 pokt x {crypto["pocket-network"].usd} $ ={" "}
-        {(crypto["pocket-network"].usd * 7254).toFixed(2)} $
+        {(crypto["pocket-network"].usd * 3860).toFixed(2)} $
       </p>
     </main>
   );
