@@ -71,6 +71,9 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+.tati {
+  margin: 20px 0;
+}
 
 @media (prefers-color-scheme: light) {
   :root {

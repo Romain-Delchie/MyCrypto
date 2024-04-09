@@ -28,8 +28,8 @@ export default function Home() {
       <p className="parap-home">{cryptoTotalUSD.toFixed(0)} $</p>
       <Chart allCrypto={crypto} page="totalUSD" />
       <CryptoList crypto={crypto} page="" total={cryptoTotalUSD} />
-      <p>
-        Tatiana : 7254 pokt x {crypto["pocket-network"].usd} $ ={" "}
+      <p className="tati">
+        Tatiana : 3860 pokt x {crypto["pocket-network"].usd} $ ={" "}
         {(crypto["pocket-network"].usd * 7254).toFixed(2)} $
       </p>
     </main>
