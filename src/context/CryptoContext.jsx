@@ -27,14 +27,14 @@ const CryptoProvider = ({ children }) => {
       crypto.integritee.qty = 270;
       crypto["drep-new"].qty = 0;
       crypto.zcash.qty = 199;
-      crypto.airswap.qty = 59590;
+      crypto.airswap.qty = 0;
       crypto.apwine.qty = 0;
       crypto.fsn.qty = 1806;
       crypto.tether.qty = 0;
       crypto.interlay.qty = 7486;
       crypto.marlin.qty = 398851;
       crypto.modex.qty = 0;
-      crypto["pocket-network"].qty = 89539;
+      crypto["pocket-network"].qty = 144045;
       crypto.radix.qty = 102130;
       crypto.agoric.qtyDefi = 0;
       crypto.airswap.qtyDefi = 0;
